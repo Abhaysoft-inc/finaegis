@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useBank } from '../context/BankContext';
 import { 
-  HiBuildingLibrary, 
   HiPlay,
   HiArrowPath
 } from 'react-icons/hi2';
@@ -16,12 +15,16 @@ export default function Navbar({ onOpenSimulateModal }) {
         
         {/* Brand & System Status */}
         <div className="flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-900 text-white">
-              <HiBuildingLibrary className="h-4 w-4" />
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-slate-900 text-sm tracking-tight">AegisBank Operations</span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src="/aegis-logo.png" 
+              alt="AEGIS" 
+              className="h-5 sm:h-5.5 w-auto object-contain transition-opacity group-hover:opacity-80" 
+            />
+            <div className="flex items-center gap-2 pl-3 border-l border-slate-200">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Operations
+              </span>
               <span className="text-[11px] font-mono px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
                 PROD v4.2
               </span>
